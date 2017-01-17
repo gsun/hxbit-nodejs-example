@@ -1,0 +1,11 @@
+-main Test
+-lib hxbit
+-lib hxnodejs
+-D server
+-js testserver.js
+
+--next
+-main Test
+-lib hxbit
+-lib hxnodejs
+-js testclient.js
