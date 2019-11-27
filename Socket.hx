@@ -57,7 +57,7 @@ private class SocketOutput extends haxe.io.Output {
 		s.write(bf);
 	}
 
-	override function writeString( str : String ) {
+	override function writeString( str : String,  ?encoding:haxe.io.Encoding) {
 		var bf = Buffer.from(str);
 		s.write(bf);
 	}
@@ -94,7 +94,7 @@ class Socket {
 	}
 
 	function bindEvents() {
-        s.on(SocketEvent.Error, function(e:js.Error) {
+        s.on(SocketEvent.Error, function(e:js.lib.Error) {
 			onError(e.message);
 		});
 		s.on(SocketEvent.Data, function(data:Buffer) {
