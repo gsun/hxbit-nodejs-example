@@ -58,6 +58,10 @@ class Cursor implements hxbit.NetworkSerializable {
         
         net.log("alive "+this);
     }
+    
+    public function networkAllow(mode:hxbit.NetworkSerializable.Operation, prop:Int, client:hxbit.NetworkSerializable) {
+        return true;
+    }
 
 }
 
